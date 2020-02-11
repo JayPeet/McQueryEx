@@ -1,0 +1,2 @@
+defmodule McQueryEx do
+end
