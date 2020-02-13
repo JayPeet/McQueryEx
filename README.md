@@ -1,7 +1,12 @@
 # McQueryEx
-[![Hex version](https://img.shields.io/hexpm/v/mcqueryex.svg "Hex version")](https://hex.pm/packages/mcqueryex)
+[![Build status](https://travis-ci.org/JayPeet/mc_query_ex.svg "Build status")](https://travis-ci.org/JayPeet/mc_query_ex)
+[![Hex version](https://img.shields.io/hexpm/v/mc_query_ex.svg "Hex version")](https://hex.pm/packages/mc_query_ex)
+![Hex downloads](https://img.shields.io/hexpm/dt/mc_query_ex.svg "Hex downloads")
 
 An Elixir module for making requests to a Minecraft servers query interface.
+
+## Contributing
+Contributions are always welcome. Feel free to make an issue to discuss a feature or bug.
 
 ## Examples
 
