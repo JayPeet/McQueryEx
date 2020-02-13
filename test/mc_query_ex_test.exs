@@ -1,4 +1,4 @@
 defmodule McQueryExTest do
   use ExUnit.Case
-  doctest McQueryEx
+  #doctest McQueryEx
 end
