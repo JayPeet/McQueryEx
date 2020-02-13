@@ -23,3 +23,5 @@ erl_crash.dump
 mc_query_ex-*.tar
 
 .elixir_ls
+
+mix.lock
