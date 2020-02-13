@@ -1,21 +1,35 @@
 # McQueryEx
+[![Hex version](https://img.shields.io/hexpm/v/mcqueryex.svg "Hex version")](https://hex.pm/packages/mcqueryex)
 
-**TODO: Add description**
+An Elixir module for making requests to a Minecraft servers query interface.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mc_query_ex` to your list of dependencies in `mix.exs`:
+## Examples
 
 ```elixir
-def deps do
-  [
-    {:mc_query_ex, "~> 0.1.0"}
-  ]
-end
+iex> {:ok, query} = McQueryEx.new(host: {192, 168, 0, 20}, port: 25565)
+{:ok,
+ %McQueryEx{
+   host: {192, 168, 0, 20},
+   port: 25565,
+   session_id: 1,
+   socket: #Port<0.4>,
+   timeout: 1000
+ }}
+
+iex> {:ok, full_stats} = McQueryEx.get_full_stat(query)
+{:ok,
+ %McQueryEx.FullStat{
+   basic: %McQueryEx.BasicStat{
+     game_type: "SMP",
+     host_ip: "192.168.0.20",
+     host_port: 25575,
+     map: "world",
+     max_players: "20",
+     motd: "Welcome to McQueryEx!",
+     num_players: "0"
+   },
+   players: ["jay_x_peet", "elixir"],
+   plugins: "",
+   server_version: "1.12.2"
+ }}
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/mc_query_ex](https://hexdocs.pm/mc_query_ex).
-
